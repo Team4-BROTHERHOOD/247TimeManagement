@@ -39,12 +39,13 @@ namespace DrawerLayoutWP8
                 switch (menuItemName)
                 {
                     case "Item2":
-                        //NavigationService.Navigate(new Uri("/Statistics.xaml", UriKind.Relative));
+                        //NavigationService.Navigate(new Uri("/AccountManagement.xaml", UriKind.Relative));
                         //DrawerLayout.CloseDrawer();
                         break;
 
                     case "Item3":
-                        //NavigationService.Navigate(new Uri("/Statistics.xaml", UriKind.Relative));
+                        NavigationService.Navigate(new Uri("/AccountManagement.xaml", UriKind.Relative));
+                        DrawerLayout.CloseDrawer();
                         break;
 
                     case "Item4":
