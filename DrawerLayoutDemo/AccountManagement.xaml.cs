@@ -15,7 +15,7 @@ namespace DrawerLayoutDemo
         public AccountManagement()
         {
             InitializeComponent();
-                       DrawerLayout.InitializeDrawerLayout();
+            DrawerLayout.InitializeDrawerLayout();
         }
 
         private void DrawerIcon_Tapped(object sender, System.Windows.Input.GestureEventArgs e)
@@ -39,12 +39,14 @@ namespace DrawerLayoutDemo
                         DrawerLayout.CloseDrawer();
                         break;
 
-                    case "Item3":
-                        //NavigationService.Navigate(new Uri("/Statistics.xaml", UriKind.Relative));
+                    case "Item2":
+                        NavigationService.Navigate(new Uri("/Statistics.xaml", UriKind.Relative));
+                        DrawerLayout.CloseDrawer();
                         break;
 
                     case "Item4":
-                        //NavigationService.Navigate(new Uri("/Statistics.xaml", UriKind.Relative));
+                        NavigationService.Navigate(new Uri("/AboutUs.xaml", UriKind.Relative));
+                        DrawerLayout.CloseDrawer();
                         break;
                 }
             }

@@ -1,5 +1,5 @@
 ﻿<phone:PhoneApplicationPage
-    x:Class="DrawerLayoutDemo.AccountManagement"
+    x:Class="DrawerLayoutDemo.Statistics"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
@@ -13,12 +13,7 @@
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
-    <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar>
-            <shell:ApplicationBarIconButton x:Name="btnEditPro" IconUri="/Assets/Icon/edit.png" Text="Edit Project"/>
-            <shell:ApplicationBarIconButton x:Name="btnLogout" IconUri="/Assets/Icon/logout.png" Text="Log Out"/>
-        </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>
+
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
@@ -33,7 +28,7 @@
             </Grid.ColumnDefinitions>
 
             <Image Margin="5"  x:Name="DrawerIcon"  Grid.Column="0" Source="/Assets/ic_drawer.png" HorizontalAlignment="Left" Tap="DrawerIcon_Tapped" />
-            <TextBlock Grid.Column="1" Text="ACCOUNT MANAGEMENT" Foreground="White" VerticalAlignment="Center" FontSize="25" TextAlignment="Center"/>
+            <TextBlock Grid.Column="1" Text="STATISTICS" Foreground="White" VerticalAlignment="Center" FontSize="25" TextAlignment="Center"/>
         </Grid>
 
         <drawerLayout:DrawerLayout Grid.Row="1"  x:Name="DrawerLayout">
@@ -67,14 +62,14 @@
                         </Grid>
 
                         <Grid x:Name="Item2" Background="Transparent" Grid.Row="2" Tap="Item_Tapped">
-                            <Border BorderBrush="#FFE0E0E0" BorderThickness="0 0 0 1" />
+                            <Border BorderBrush="#FFE0E0E0" BorderThickness="0 0 0 1"  Background="#FFB0EEEB" />
                             <StackPanel Margin="20 10 0 5" VerticalAlignment="Bottom">
                                 <TextBlock Text="STATISTICS" Foreground="Black"  VerticalAlignment="Bottom" HorizontalAlignment="Left"  FontSize="18" />
                             </StackPanel>
                         </Grid>
 
                         <Grid x:Name="Item3" Background="Transparent" Grid.Row="3" Tap="Item_Tapped">
-                            <Border BorderBrush="#FFE0E0E0" BorderThickness="0 0 0 1" Background="#FFB0EEEB"/>
+                            <Border BorderBrush="#FFE0E0E0" BorderThickness="0 0 0 1"/>
                             <StackPanel Margin="20 10 0 5" VerticalAlignment="Bottom">
                                 <TextBlock Text="ACCOUNT MANAGEMENT" Foreground="Black"  VerticalAlignment="Bottom" HorizontalAlignment="Left"  FontSize="18" />
                             </StackPanel>

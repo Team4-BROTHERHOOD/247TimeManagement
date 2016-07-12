@@ -1,0 +1,45 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="DrawerLayoutDemo.Login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar>
+            <shell:ApplicationBarIconButton x:Name="btnResgister" IconUri="/Assets/Icon/forgotpass.png" Click="btnResgister_Click" IsEnabled="True" Text="Register"/>
+            <shell:ApplicationBarIconButton IconUri="/Assets/Icon/forgotpass.png" IsEnabled="True" Text="Forget Pass"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="RootLayout">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid x:Name="TitleBar" Background="#373A36"  Grid.Row ="0" Height="60">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Image Margin="5,5,0,5"  x:Name="DrawerIcon"  Grid.Column="0" HorizontalAlignment="Left" Grid.ColumnSpan="2" Width="57" Source="/Assets/Login.png" />
+            <TextBlock x:Name="TxtBlckTop" Grid.Column="1" Text="LOG IN" Foreground="White" VerticalAlignment="Center" FontSize="20" TextAlignment="Center"/>
+        </Grid>
+        <Grid x:Name="MainFragment" Background="White" Grid.Row="1">
+            <TextBox x:Name="txtEmail" Margin="53,231,52,0" TextWrapping="Wrap" VerticalAlignment="Top" BorderBrush="#FFD6E7FF"/>
+            <Button x:Name="btnLogin" Content="LOG IN" HorizontalAlignment="Stretch" Margin="149,487,142,64" VerticalAlignment="Stretch" Background="#FF373A36"/>
+            <TextBlock x:Name="txtblEmail" Margin="53,173,102,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" FontSize="24" FontFamily="Andalus" Foreground="Black"/>
+            <TextBlock x:Name="txtblPass" Margin="53,308,102,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" FontSize="24" FontFamily="Andalus" Foreground="Black"/>
+            <Image HorizontalAlignment="Left" Margin="167,14,0,463" Width="154" Source="Assets/247logo.png"/>
+            <PasswordBox Margin="53,350,52,0" VerticalAlignment="Top" Height="71" BorderBrush="#FFD6E7FF"/>
+        </Grid>
+    </Grid>
+</phone:PhoneApplicationPage>

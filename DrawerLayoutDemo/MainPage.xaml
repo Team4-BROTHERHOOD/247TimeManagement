@@ -13,6 +13,13 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar>
+            <shell:ApplicationBarIconButton x:Name="btnAddPro" IconUri="/Assets/Icon/add.png" Click="btnAddPro_Click" Text="Add Project"/>
+            <shell:ApplicationBarIconButton x:Name="btnEditPro" IconUri="/Assets/Icon/edit.png" Text="Edit Project"/>
+            <shell:ApplicationBarIconButton x:Name="btnDeletePro" IconUri="/Assets/Icon/delete.png" Text="Del Project"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -26,14 +33,12 @@
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-
             <Image Margin="5"  x:Name="DrawerIcon"  Grid.Column="0" Source="/Assets/ic_drawer.png" HorizontalAlignment="Left" Tap="DrawerIcon_Tapped" />
             <TextBlock Grid.Column="1" Text="TASK MANAGEMENT" Foreground="White" VerticalAlignment="Center" FontSize="25" TextAlignment="Center"/>
         </Grid>
 
         <drawerLayout:DrawerLayout Grid.Row="1"  x:Name="DrawerLayout">
-            <Grid x:Name="MainFragment" Background="White">
-            </Grid>
+            <Grid x:Name="MainFragment" Background="White"/>
 
             <Grid x:Name="ListFragment" Background="White">
                 <ScrollViewer>
@@ -60,14 +65,12 @@
                                 <TextBlock Text="TASK MANAGEMENT" Foreground="Black"  VerticalAlignment="Bottom" HorizontalAlignment="Left"  FontSize="18" />
                             </StackPanel>
                         </Grid>
-
                         <Grid x:Name="Item2" Background="Transparent" Grid.Row="2" Tap="Item_Tapped">
                             <Border BorderBrush="#FFE0E0E0" BorderThickness="0 0 0 1" />
                             <StackPanel Margin="20 10 0 5" VerticalAlignment="Bottom">
                                 <TextBlock Text="STATISTICS" Foreground="Black"  VerticalAlignment="Bottom" HorizontalAlignment="Left"  FontSize="18" />
                             </StackPanel>
                         </Grid>
-
                         <Grid x:Name="Item3" Background="Transparent" Grid.Row="3" Tap="Item_Tapped">
                             <Border BorderBrush="#FFE0E0E0" BorderThickness="0 0 0 1" />
                             <StackPanel Margin="20 10 0 5" VerticalAlignment="Bottom">
